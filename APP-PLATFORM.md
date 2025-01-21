@@ -107,7 +107,7 @@ https://github.com/user-attachments/assets/f602e8b8-8f78-403e-9d21-e481826eb6df
     <Button onClick={handleClose} color="">
         Cancel
     </Button>
-    <Button onClick={handleEdit} color="">
+    <Button onClick={handleSubmit} color="">
         Submit
     </Button>
 </DialogActions>
