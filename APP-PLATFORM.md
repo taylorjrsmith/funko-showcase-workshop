@@ -92,10 +92,11 @@ https://github.com/user-attachments/assets/f602e8b8-8f78-403e-9d21-e481826eb6df
 3. In the code block below, you are going to modify it to have the `<Button>` element as well as `<Dialog>` and `<DialogContent>` elements. Within the `<DigalogContent>` you are going to had 5 `<TextField>'`s for each of the data properties in the databse. You can choose the order of those but a good practice is to match the order that the data is displayed.
 ```html
 <TextField
-    margin=""
-    name=""
-    label=""
-    type=""
+    autoFocus
+    margin="dense"
+    name="imageUrl"
+    label="Image URL"
+    type="url"
     fullWidth
     value={}
     onChange={handleInputChange}
