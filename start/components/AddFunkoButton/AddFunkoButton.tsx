@@ -88,10 +88,10 @@ const AddFunkoButton = ({ setFunkos }: { setFunkos: React.Dispatch<React.SetStat
         
         </DialogContent>
         <DialogActions>
-    <Button onClick={handleClose} color="red">
+    <Button onClick={handleClose} color="error">
         Cancel
     </Button>
-    <Button onClick={handleSubmit} color="green">
+    <Button onClick={handleSubmit} color="success">
         Submit
     </Button>
 </DialogActions>

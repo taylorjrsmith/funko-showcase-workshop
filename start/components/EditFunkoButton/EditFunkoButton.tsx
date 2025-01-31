@@ -70,10 +70,10 @@ const EditFunkoButton = ({ setFunkos, funko }: { setFunkos: React.Dispatch<React
 
         </DialogContent>
         <DialogActions>
-    <Button onClick={handleClose} color="red">
+    <Button onClick={handleClose} color="error">
         Cancel
     </Button>
-    <Button onClick={handleSubmit} color="green">
+    <Button onClick={handleSubmit} color="success">
         Submit
     </Button>
 </DialogActions>
