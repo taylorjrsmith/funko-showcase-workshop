@@ -44,6 +44,10 @@ There is also search funtionality that you will be build in order to quickly fin
 - Install [VS Code](https://code.visualstudio.com/)
 - Install the [DOTENV extension](https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode) in VS Code
 
+### Slidedeck
+
+[Launch, Scale, Succeed: Mastering DigitalOcean in 4 Hours](https://slides.com/chrisdemars/funko-showcase/fullscreen)
+
 ### Workshop Lab Guide
 
 The lab guide is broken up into various markdown files that will guide you through the process. Each file will have a series of steps that you will need to follow to complete the lab. If you have any questions, please feel free to ask the presenters.
