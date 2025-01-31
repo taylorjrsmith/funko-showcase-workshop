@@ -25,11 +25,13 @@ export const getServerSideProps: GetServerSideProps<IndexProps> = async () => {
     const client = await clientPromise;
     const db = client.db(process.env.DATABASE_NAME);
     const collectionName = process.env.COLLECTION_NAME;
+    console.log("db called")
     if (!collectionName) {
       throw new Error("COLLECTION_NAME is not defined in the environment variables");
     }
     const funkos = await db.collection(collectionName).find({}).limit(30).toArray();
 
+    console.log(funkos.length);
     return {
       props: {
         isConnected: true,
@@ -53,6 +55,7 @@ export default function Home({
 
   useEffect(() => {
     const filterFunkos = (funko: Funko) => {
+      console.log(funko);
       return (
         funko?.source?.toLowerCase()?.includes(search.toLowerCase()) ||
         funko?.character?.toLowerCase()?.includes(search.toLowerCase())
@@ -60,6 +63,7 @@ export default function Home({
     };
 
     const filteredFunkos = funkosFetch.filter(filterFunkos);
+    console.log(filteredFunkos);
     setFunkos(filteredFunkos);
   }, [search]);
 
@@ -74,7 +78,7 @@ export default function Home({
       <Container maxWidth="lg">
         <SearchBar setSearch={setSearch} />
 
-        {/* Insert code for Add Button component here */}
+        <AddFunkoButton setFunkos={setFunkos}></AddFunkoButton>
 
         <main>
           <Box display="grid" gridTemplateColumns="repeat(3, 1fr)" gap={4}>

@@ -33,8 +33,69 @@ const AddFunkoButton = ({ setFunkos }: { setFunkos: React.Dispatch<React.SetStat
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }}>
-
-      {/* Code to create Add Button functionality goes here */}
+      <Button variant="contained" color="secondary" onClick={handleClickOpen}>Add Funko</Button>
+      <Dialog open={open} onClose={handleClose}>
+        <DialogTitle>Enter Details</DialogTitle>
+        <DialogContent>
+        <TextField
+            autoFocus
+            margin="dense"
+            name="character"
+            label="Character"
+            fullWidth
+            value={formValues.character}
+            onChange={handleInputChange}
+          />
+            <TextField
+            autoFocus
+            margin="dense"
+            name="numberInLine"
+            label="Number In Line"
+            type="number"
+            fullWidth
+            value={formValues.numberInLine}
+            onChange={handleInputChange}
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            name="imageUrl"
+            label="Image"
+            fullWidth
+            value={formValues.imageUrl}
+            onChange={handleInputChange}
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            name="yearReleased"
+            label="Year"
+            type="number"
+            fullWidth
+            value={formValues.yearReleased}
+            onChange={handleInputChange}
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            name="source"
+            label="Source"
+            type="number"
+            fullWidth
+            value={formValues.source}
+            onChange={handleInputChange}
+          />
+        
+        </DialogContent>
+        <DialogActions>
+    <Button onClick={handleClose} color="red">
+        Cancel
+    </Button>
+    <Button onClick={handleSubmit} color="green">
+        Submit
+    </Button>
+</DialogActions>
+</Dialog>
 
     </div>
   );
